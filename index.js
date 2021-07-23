@@ -26,7 +26,31 @@ const animals = [
  * getTotalCount(animals); //> 28
  * getTotalCount([]); //> 0 // returns 0 if the input array is empty
  */
-function getTotalCount(animals) {}
+
+
+//
+function getTotalCount(animals) {
+  if (animals.length === 0) {
+    return 0;
+  }
+  let totalCount = 0;
+  let total = 0;
+  for(let i = 0; i < animals.length; i++) {
+    const animal = animals[i];
+    total = total + animal.count;
+  }
+  totalCount = total
+  
+  return totalCount;
+}
+//let total = 0;
+
+//for (let animal of animals) {
+//  total = total + animal.count;
+//}
+//return total
+//}
+console.log(getTotalCount((animals)));
 
 /**
  * FUNCTION DESCRIPTION
@@ -40,7 +64,21 @@ function getTotalCount(animals) {}
  * getAllKinds(animals); //> ["Pig", "Cow", "Chicken", "Horse", "Dog", "Cat"]
  * getAllKinds([]); //> [] // returns empty array if input array is empty
  */
-function getAllKinds(animals) {}
+
+//input is an array and we are returning the key value of each object within the array
+//initial value will be the key in each object in the array of objects it will be an array of strings
+function getAllKinds(animals) {
+  const kind = [];
+for (let i = 0; i < animals.length; i++){
+  const animal = animals[i];
+  kind.push(animal.kind);
+  }
+}
+return kind;
+
+
+
+console.log(getAllKinds(animals));
 
 /**
  * FUNCTION DESCRIPTION
@@ -59,7 +97,27 @@ function getAllKinds(animals) {}
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
+  // output will be an array of objects where the object values (count) are >= minimim amount
+  //conditional - the value or the count =>
+  // intial value 
+  //  let largeCount = [];
+  
+  
+  function filterByCountMinimum(animals, minimum) {
+   for (let i =0; i < animals.length; i++){
+       const animal = animals[i];
+       theLowestAmount =minimum
+       if (animal>= minimum) {
+           largeCount.push(animal>=minimum)
+         }
+       }
+       
+
+  return accumulator;
+}
+
+console.log(filterByCountMinimum(animals, minimum)); //> 1
+
 
 /**
  * FUNCTION DESCRIPTION
@@ -73,8 +131,14 @@ function filterByCountMinimum(animals, minimum) {}
  * getMostCommonAnimal(animals); //> { kind: "Chicken", count: 11 }
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
-function getMostCommonAnimal(animals) {}
+// function getMostCommonAnimal(animals) {
+//   const sortedByCount = animals.sort()
+  
+//   for(let i = 0; i < animals.length; i++){
+    
+//   }
 
+//MUST USE .SORT METHOD HERE
 // Do not change anything below this line.
 module.exports = {
   getTotalCount,
